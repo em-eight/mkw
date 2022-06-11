@@ -8,6 +8,50 @@
 extern "C" {
 #endif
 
+#include <egg/core/eggHeap.hpp>
+
+// TODO: remove after declaring DvdArchive
+typedef enum {
+    DVD_ARCHIVE_STATE_CLEARED = 0,
+    DVD_ARCHIVE_STATE_RIPPED = 2,
+    DVD_ARCHIVE_STATE_DECOMPRESSED = 3,
+    DVD_ARCHIVE_STATE_MOUNTED = 4
+} ArchiveState;
+
+class DvdArchive {
+public:
+    DvdArchive();
+    void clearArchive();
+    void unmount();
+    void loadOther(DvdArchive* other, EGG::Heap* heap);
+    virtual ~DvdArchive();
+private:
+    void *mArchive;                     // this pointer is not void, but does not matter in the scope of this function
+    void *mArchiveStart;
+    u32 mArchiveSize;
+    EGG::Heap *mArchiveHeap;
+    void *mFileStart;
+    u32 mFileSize;
+    EGG::Heap *mFileHeap;
+    volatile ArchiveState mStatus;
+};
+
+class MultiDvdArchive {
+public:
+    MultiDvdArchive();
+    void init();
+    void unmount();
+    void loadOther(MultiDvdArchive* other, EGG::Heap* heap);
+    virtual ~MultiDvdArchive();
+private:
+    DvdArchive *archives;
+    u16 archiveCount;
+    u8 _0a[0x10 - 0x0a];
+    char **suffixes;
+    u8 _14[0x18 - 0x14];
+    u32 *kinds;
+};
+
 // PAL: 0x8052a098..0x8052a1c8
 UNKNOWN_FUNCTION(MultiDvdArchive_create);
 // PAL: 0x8052a1c8..0x8052a21c
@@ -30,8 +74,6 @@ UNKNOWN_FUNCTION(unk_8052a488);
 UNKNOWN_FUNCTION(unk_8052a4e0);
 // PAL: 0x8052a538..0x8052a648
 UNKNOWN_FUNCTION(MultiDvdArchive_ct);
-// PAL: 0x8052a648..0x8052a6dc
-UNKNOWN_FUNCTION(MultiDvdArchive_init);
 // PAL: 0x8052a6dc..0x8052a760
 UNKNOWN_FUNCTION(MultiDvdArchive_dt);
 // PAL: 0x8052a760..0x8052a800
@@ -42,10 +84,6 @@ UNKNOWN_FUNCTION(unk_8052a800);
 UNKNOWN_FUNCTION(MultiDvdArchive_exists);
 // PAL: 0x8052a954..0x8052aa88
 UNKNOWN_FUNCTION(MultiDvdArchive_load);
-// PAL: 0x8052aa88..0x8052aae8
-UNKNOWN_FUNCTION(unk_8052aa88);
-// PAL: 0x8052aae8..0x8052ab6c
-UNKNOWN_FUNCTION(unk_8052aae8);
 // PAL: 0x8052ab6c..0x8052ac40
 UNKNOWN_FUNCTION(unk_8052ab6c);
 // PAL: 0x8052ac40..0x8052aca0
