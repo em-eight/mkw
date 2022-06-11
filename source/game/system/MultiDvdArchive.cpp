@@ -1,5 +1,7 @@
 #include "MultiDvdArchive.hpp"
 
+#include <string.h>
+
 extern "C" {
 // PAL: 0x80518e10
 extern UNKNOWN_FUNCTION(DvdArchive_load);
@@ -497,9 +499,6 @@ lbl_8052a620:
   blr;
   // clang-format on
 }
-
-#define strncpy unk_805553b0
-extern "C" char *strncpy(char *dest, const char *src, u32 n);
 
 extern const char*const SZS;
 

@@ -4,53 +4,11 @@
 
 #include <decomp.h>
 
+#include <egg/core/eggHeap.hpp>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <egg/core/eggHeap.hpp>
-
-// TODO: remove after declaring DvdArchive
-typedef enum {
-    DVD_ARCHIVE_STATE_CLEARED = 0,
-    DVD_ARCHIVE_STATE_RIPPED = 2,
-    DVD_ARCHIVE_STATE_DECOMPRESSED = 3,
-    DVD_ARCHIVE_STATE_MOUNTED = 4
-} ArchiveState;
-
-class DvdArchive {
-public:
-    DvdArchive();
-    void clearArchive();
-    void unmount();
-    void loadOther(DvdArchive* other, EGG::Heap* heap);
-    virtual ~DvdArchive();
-private:
-    void *mArchive;                     // this pointer is not void, but does not matter in the scope of this function
-    void *mArchiveStart;
-    u32 mArchiveSize;
-    EGG::Heap *mArchiveHeap;
-    void *mFileStart;
-    u32 mFileSize;
-    EGG::Heap *mFileHeap;
-    volatile ArchiveState mStatus;
-};
-
-class MultiDvdArchive {
-public:
-    MultiDvdArchive();
-    void init();
-    void unmount();
-    void loadOther(MultiDvdArchive* other, EGG::Heap* heap);
-    virtual ~MultiDvdArchive();
-private:
-    DvdArchive *archives;
-    u16 archiveCount;
-    u8 _0a[0x10 - 0x0a];
-    char **suffixes;
-    u8 _14[0x18 - 0x14];
-    u32 *kinds;
-};
 
 // PAL: 0x8052a098..0x8052a1c8
 UNKNOWN_FUNCTION(MultiDvdArchive_create);
@@ -100,3 +58,45 @@ UNKNOWN_FUNCTION(unk_8052ae08);
 #ifdef __cplusplus
 }
 #endif
+
+// TODO: remove after declaring DvdArchive
+typedef enum {
+    DVD_ARCHIVE_STATE_CLEARED = 0,
+    DVD_ARCHIVE_STATE_RIPPED = 2,
+    DVD_ARCHIVE_STATE_DECOMPRESSED = 3,
+    DVD_ARCHIVE_STATE_MOUNTED = 4
+} ArchiveState;
+
+class DvdArchive {
+public:
+    DvdArchive();
+    void clearArchive();
+    void unmount();
+    void loadOther(DvdArchive* other, EGG::Heap* heap);
+    virtual ~DvdArchive();
+private:
+    void *mArchive;                     // this pointer is not void, but does not matter in the scope of this function
+    void *mArchiveStart;
+    u32 mArchiveSize;
+    EGG::Heap *mArchiveHeap;
+    void *mFileStart;
+    u32 mFileSize;
+    EGG::Heap *mFileHeap;
+    volatile ArchiveState mStatus;
+};
+
+class MultiDvdArchive {
+public:
+    MultiDvdArchive();
+    void init();
+    void unmount();
+    void loadOther(MultiDvdArchive* other, EGG::Heap* heap);
+    virtual ~MultiDvdArchive();
+private:
+    DvdArchive *archives;
+    u16 archiveCount;
+    u8 _0a[0x10 - 0x0a];
+    char **suffixes;
+    u8 _14[0x18 - 0x14];
+    u32 *kinds;
+};
