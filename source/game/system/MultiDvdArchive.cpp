@@ -53,7 +53,7 @@ lbl_8052a0d4:
   cmpwi r3, 0;
   beq lbl_8052a0ec;
   li r4, 1;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
 lbl_8052a0ec:
   mr r31, r3;
   b lbl_8052a1b0;
@@ -64,7 +64,7 @@ lbl_8052a0f4:
   mr r31, r3;
   beq lbl_8052a1b0;
   li r4, 2;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -81,7 +81,7 @@ lbl_8052a134:
   mr r31, r3;
   beq lbl_8052a1b0;
   li r4, 4;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -98,7 +98,7 @@ lbl_8052a174:
   mr r31, r3;
   beq lbl_8052a1b0;
   li r4, 2;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -129,7 +129,7 @@ asm UNKNOWN_FUNCTION(unk_8052a1c8) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -158,7 +158,7 @@ asm UNKNOWN_FUNCTION(CourseMultiDvdArchive_init) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl init__Q26System15MultiDvdArchiveFv;
+  bl init__15MultiDvdArchiveFv;
   lhz r0, 8(r31);
   lis r4, 0;
   addi r4, r4, 0;
@@ -206,7 +206,7 @@ asm UNKNOWN_FUNCTION(unk_8052a2a8) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -235,7 +235,7 @@ asm UNKNOWN_FUNCTION(unk_8052a2fc) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl init__Q26System15MultiDvdArchiveFv;
+  bl init__15MultiDvdArchiveFv;
   lis r3, 0;
   lhz r0, 8(r31);
   lwz r4, 0(r3);
@@ -274,7 +274,7 @@ asm UNKNOWN_FUNCTION(unk_8052a36c) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl __ct__Q26System15MultiDvdArchiveFUs;
+  bl __ct__15MultiDvdArchiveFUs;
   lis r4, 0;
   mr r3, r31;
   addi r4, r4, 0;
@@ -303,7 +303,7 @@ asm UNKNOWN_FUNCTION(unk_8052a3c0) {
   stw r0, 0x14(r1);
   stw r31, 0xc(r1);
   mr r31, r3;
-  bl init__Q26System15MultiDvdArchiveFv;
+  bl init__15MultiDvdArchiveFv;
   lis r3, 0;
   lhz r0, 8(r31);
   lwz r4, 0(r3);
@@ -426,92 +426,12 @@ lbl_8052a51c:
   // clang-format on
 }
 
-// Symbol: __ct__Q26System15MultiDvdArchiveFUs
-// PAL: 0x8052a538..0x8052a648
-MARK_BINARY_BLOB(__ct__Q26System15MultiDvdArchiveFUs, 0x8052a538, 0x8052a648);
-asm UNKNOWN_FUNCTION(__ct__Q26System15MultiDvdArchiveFUs) {
-  // clang-format off
-  nofralloc;
-  stwu r1, -0x20(r1);
-  mflr r0;
-  lis r6, 0;
-  stw r0, 0x24(r1);
-  mulli r5, r4, 0x24;
-  addi r6, r6, 0;
-  stmw r27, 0xc(r1);
-  li r31, 0;
-  mr r28, r4;
-  mr r27, r3;
-  stw r31, 4(r3);
-  stw r6, 0(r3);
-  sth r4, 8(r3);
-  stw r31, 0x10(r3);
-  addi r3, r5, 0x10;
-  bl unk_805553b0;
-  lis r4, 0;
-  lis r5, 0;
-  mr r7, r28;
-  li r6, 0x24;
-  addi r4, r4, 0;
-  addi r5, r5, 0;
-  bl unk_805553b0;
-  stw r3, 4(r27);
-  rlwinm r30, r28, 2, 0xe, 0x1d;
-  mr r3, r30;
-  bl unk_805553b0;
-  stw r3, 0x10(r27);
-  mr r3, r30;
-  bl unk_805553b0;
-  stw r3, 0x14(r27);
-  mr r3, r30;
-  bl unk_805553b0;
-  stw r3, 0x18(r27);
-  mr r3, r30;
-  bl unk_805553b0;
-  lis r4, 0;
-  stw r3, 0xc(r27);
-  lwz r30, 0(r4);
-  li r28, 0;
-  b lbl_8052a620;
-lbl_8052a5dc:
-  rlwinm r29, r28, 2, 0xe, 0x1d;
-  li r3, 0x80;
-  bl unk_805553b0;
-  lwz r6, 0x10(r27);
-  mr r4, r30;
-  li r5, 0x80;
-  stwx r3, r6, r29;
-  lwz r3, 0x10(r27);
-  lwzx r3, r3, r29;
-  bl unk_805553b0;
-  lwz r3, 0x18(r27);
-  addi r28, r28, 1;
-  stwx r31, r3, r29;
-  lwz r3, 0xc(r27);
-  stwx r31, r3, r29;
-  lwz r3, 0x14(r27);
-  stwx r31, r3, r29;
-lbl_8052a620:
-  lhz r0, 8(r27);
-  clrlwi r3, r28, 0x10;
-  cmplw r3, r0;
-  blt lbl_8052a5dc;
-  mr r3, r27;
-  lmw r27, 0xc(r1);
-  lwz r0, 0x24(r1);
-  mtlr r0;
-  addi r1, r1, 0x20;
-  blr;
-  // clang-format on
-}
-/*
-namespace System {
 MultiDvdArchive::MultiDvdArchive(u16 archiveCount) {
     this->archives = nullptr;
     this->archiveCount = archiveCount;
     this->suffixes = nullptr;
 
-    this->archives = new DvdArchive[archiveCount];
+    this->archives = new System::DvdArchive[archiveCount];
     this->suffixes = (char**) new char*[archiveCount];
     this->fileStarts = (void **) new u32[archiveCount];
     this->kinds = new u32[archiveCount];
@@ -525,58 +445,6 @@ MultiDvdArchive::MultiDvdArchive(u16 archiveCount) {
         this->fileStarts[i] = nullptr;
     }
 }
-}*/
-
-// Symbol: MultiDvdArchive_init
-// PAL: 0x8052a648..0x8052a6dc
-/*MARK_BINARY_BLOB(MultiDvdArchive_init, 0x8052a648, 0x8052a6dc);
-asm UNKNOWN_FUNCTION(MultiDvdArchive_init) {
-  // clang-format off
-  nofralloc;
-  stwu r1, -0x20(r1);
-  mflr r0;
-  lis r4, 0;
-  stw r0, 0x24(r1);
-  stw r31, 0x1c(r1);
-  li r31, 0;
-  stw r30, 0x18(r1);
-  lwz r30, 0(r4);
-  stw r29, 0x14(r1);
-  li r29, 0;
-  stw r28, 0x10(r1);
-  mr r28, r3;
-  b lbl_8052a6ac;
-lbl_8052a67c:
-  clrlwi r0, r29, 0x10;
-  cmplw r0, r3;
-  bge lbl_8052a6a8;
-  lwz r3, 0x18(r28);
-  rlwinm r0, r29, 2, 0xe, 0x1d;
-  mr r4, r30;
-  li r5, 0x80;
-  stwx r31, r3, r0;
-  lwz r3, 0x10(r28);
-  lwzx r3, r3, r0;
-  bl unk_805553b0;
-lbl_8052a6a8:
-  addi r29, r29, 1;
-lbl_8052a6ac:
-  lhz r3, 8(r28);
-  clrlwi r0, r29, 0x10;
-  cmplw r0, r3;
-  blt lbl_8052a67c;
-  lwz r0, 0x24(r1);
-  lwz r31, 0x1c(r1);
-  lwz r30, 0x18(r1);
-  lwz r29, 0x14(r1);
-  lwz r28, 0x10(r1);
-  mtlr r0;
-  addi r1, r1, 0x20;
-  blr;
-  // clang-format on
-}*/
-
-namespace System {
 
 void MultiDvdArchive::init() {
     const char* suffix = SZS;
@@ -587,8 +455,6 @@ void MultiDvdArchive::init() {
             strncpy(this->suffixes[i],suffix,128);
         }
     }
-}
-
 }
 
 // Symbol: MultiDvdArchive_dt
