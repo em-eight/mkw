@@ -233,6 +233,8 @@ public:
   char unk5ac_60b[0x60b-0x5ac];
 
   MultiDvdArchive* loadCourse(CourseId courseId, EGG::Heap* param_3, bool splitScreen);
+  MultiDvdArchive* loadMission(CourseId courseId, s32 missionNum, EGG::Heap* param_3, bool splitScreen);
+  MultiDvdArchive* loadCompetition(CourseId courseId,void *fileStart,u32 fileSize,EGG::Heap* heap,u8 unk6);
   void process();
   static void doLoadTask(void* jobContext);
   void requestLoad(s32 idx, MultiDvdArchive* m, const char* p, EGG::Heap* archiveHeap) ;

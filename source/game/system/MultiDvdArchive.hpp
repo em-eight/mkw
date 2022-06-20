@@ -22,7 +22,18 @@ enum ResourceChannelID {
   RES_CHAN_NUM,
 };
 
+enum EResourceKind {
+  RES_KIND_FILE_DOUBLE_FORMAT, // 0 %s%s Supports prefix
+  RES_KIND_FILE_SINGLE_FORMAT, // 1 %s
+  RES_KIND_BUFFER,             // 2
+  RES_KIND_3,                  // unseen
+  RES_KIND_4,                  // _Dif loader
+
+    RES_KIND_DEFAULT = RES_KIND_FILE_DOUBLE_FORMAT,
+};
+
 class MultiDvdArchive {
+friend class ResourceManager;
 public:
   MultiDvdArchive(u16 archiveCount);
   virtual ~MultiDvdArchive();
@@ -46,15 +57,6 @@ protected:
   void* getEarliestResBufInMem();
   void* getFarthestResBufInMem();
 
-  enum EResourceKind {
-    RES_KIND_FILE_DOUBLE_FORMAT, // 0 %s%s Supports prefix
-    RES_KIND_FILE_SINGLE_FORMAT, // 1 %s
-    RES_KIND_BUFFER,             // 2
-    RES_KIND_3,                  // unseen
-    RES_KIND_4,                  // _Dif loader
-
-    RES_KIND_DEFAULT = RES_KIND_FILE_DOUBLE_FORMAT,
-  };
   enum {
     SUFFIX_SIZE = 128,
   };

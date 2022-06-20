@@ -1064,7 +1064,7 @@ MultiDvdArchive* ResourceManager::loadCourse(CourseId courseId, EGG::Heap* param
 
 // Symbol: ResourceManager_loadMission
 // PAL: 0x80540918..0x80540b14
-MARK_BINARY_BLOB(ResourceManager_loadMission, 0x80540918, 0x80540b14);
+/*MARK_BINARY_BLOB(ResourceManager_loadMission, 0x80540918, 0x80540b14);
 asm UNKNOWN_FUNCTION(ResourceManager_loadMission) {
   // clang-format off
   nofralloc;
@@ -1201,11 +1201,49 @@ lbl_80540af8:
   addi r1, r1, 0x120;
   blr;
   // clang-format on
+}*/
+
+namespace System {
+
+MultiDvdArchive* ResourceManager::loadMission(CourseId courseId, s32 missionNum, EGG::Heap* param_3, bool splitScreen)
+{
+    char missionPath[128];
+    char courseName[128];
+
+    if (!this->multiArchives1[1]->isLoaded()) {
+        this->multiArchives1[1]->init();
+        snprintf(missionPath, sizeof(missionPath), "Race/MissionRun/mr%02d.szs", missionNum);
+        MultiDvdArchive* archive = this->multiArchives1[1];
+        if (archive->archiveCount > 1) {
+            archive->kinds[1] = RES_KIND_FILE_SINGLE_FORMAT;
+            strncpy(archive->suffixes[1], missionPath, sizeof(missionPath));
+        }
+
+        if (!splitScreen && this->courseCache.mState == 2 && courseId == this->courseCache.mCourseId) {
+            MultiDvdArchive* m = this->multiArchives1[1];
+            if (this->courseCache.mState == 2)
+                m->loadOther(this->courseCache.mArchive, param_3);
+        } else {
+            if (splitScreen) {
+                snprintf(courseName, sizeof(courseName), "Race/Course/%s_d", COURSE_NAMES[courseId]);
+                if (!this->multiArchives1[1]->exists(courseName)) {
+                    splitScreen = false;
+                }
+            }
+            if (!splitScreen) {
+                snprintf(courseName, sizeof(courseName), "Race/Course/%s", COURSE_NAMES[courseId]);
+            }
+            requestLoad(3, this->multiArchives1[1], courseName, param_3);
+        }
+    }
+    return this->multiArchives1[1];
+}
+
 }
 
 // Symbol: ResourceManager_loadCompetition
 // PAL: 0x80540b14..0x80540cfc
-MARK_BINARY_BLOB(ResourceManager_loadCompetition, 0x80540b14, 0x80540cfc);
+/*MARK_BINARY_BLOB(ResourceManager_loadCompetition, 0x80540b14, 0x80540cfc);
 asm UNKNOWN_FUNCTION(ResourceManager_loadCompetition) {
   // clang-format off
   nofralloc;
@@ -1338,6 +1376,49 @@ lbl_80540ce0:
   addi r1, r1, 0x140;
   blr;
   // clang-format on
+}*/
+
+namespace System {
+
+MultiDvdArchive* ResourceManager::loadCompetition(CourseId courseId,void *fileStart,u32 fileSize,EGG::Heap* heap,u8 param6)
+{
+    char competitionPath[128];
+    char courseName[128];
+
+    if (!this->multiArchives1[1]->isLoaded()) {
+        this->multiArchives1[1]->init();
+
+        u16 objCount = 1;
+        u16 var4 = 0;
+        for (u8 i = 0; i < 0x10; i++) {
+            if ((param6 & (1 << i)) != 0) {
+                snprintf(competitionPath, sizeof(competitionPath), "Race/Competition/CommonObj/CommonObj%02d.szs", i+1);
+                MultiDvdArchive* archive = this->multiArchives1[1];
+
+                if (objCount < archive->archiveCount) {
+                    archive->kinds[objCount] = RES_KIND_FILE_SINGLE_FORMAT;
+                    strncpy(archive->suffixes[objCount], competitionPath, sizeof(competitionPath));
+                }
+
+                objCount++;
+                var4++;
+                if (var4 > 1) break;
+            }
+        }
+
+        if (objCount < this->multiArchives1[1]->archiveCount) {
+            MultiDvdArchive* archive = this->multiArchives1[1];
+            archive->kinds[objCount] = RES_KIND_BUFFER;
+            archive->fileStarts[objCount] = fileStart;
+            archive->fileSizes[objCount] = fileSize;
+        }
+
+        snprintf(courseName, sizeof(courseName), "Race/Course/%s", COURSE_NAMES[courseId]);
+        requestLoad(4, this->multiArchives1[1], courseName, heap);
+    }
+    return this->multiArchives1[1];
+}
+
 }
 
 // Symbol: unk_80540cfc
