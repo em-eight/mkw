@@ -4,6 +4,8 @@
 #include <game/host_system/SystemManager.hpp>
 #include <game/RKScene.hpp>
 
+#pragma dont_reuse_strings on
+
 extern RKScene* scenePtr;
 
 extern const char* EarthResourceListing;
