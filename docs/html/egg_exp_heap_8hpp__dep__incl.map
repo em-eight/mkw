@@ -1,6 +1,8 @@
 <map id="source/egg/core/eggExpHeap.hpp" name="source/egg/core/eggExpHeap.hpp">
-<area shape="rect" id="node1" title="EGG wraper for expanded heaps header." alt="" coords="135,5,397,32"/>
-<area shape="rect" id="node2" href="$egg_exp_heap_8cpp.html" title="EGG wraper for expanded heaps implementation." alt="" coords="5,80,268,107"/>
-<area shape="rect" id="node3" href="$_r_k_scene_8hpp_source.html" title=" " alt="" coords="292,80,499,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="292,155,499,196"/>
+<area shape="rect" id="node1" title="EGG wraper for expanded heaps header." alt="" coords="264,5,527,32"/>
+<area shape="rect" id="node2" href="$egg_exp_heap_8cpp.html" title="EGG wraper for expanded heaps implementation." alt="" coords="5,87,268,114"/>
+<area shape="rect" id="node3" href="$_r_k_scene_8hpp_source.html" title=" " alt="" coords="292,87,499,114"/>
+<area shape="rect" id="node6" href="$_resource_manager_8hpp_source.html" title=" " alt="" coords="523,80,705,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="292,169,499,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="523,169,705,211"/>
 </map>

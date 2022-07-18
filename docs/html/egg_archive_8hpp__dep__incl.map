@@ -1,4 +1,12 @@
 <map id="source/egg/core/eggArchive.hpp" name="source/egg/core/eggArchive.hpp">
-<area shape="rect" id="node1" title="A read&#45;only view of a &quot;dolphin archive&quot; .arc file." alt="" coords="5,5,268,32"/>
-<area shape="rect" id="node2" href="$egg_archive_8cpp.html" title="TODO." alt="" coords="5,80,268,107"/>
+<area shape="rect" id="node1" title="A read&#45;only view of a &quot;dolphin archive&quot; .arc file." alt="" coords="124,5,387,32"/>
+<area shape="rect" id="node2" href="$egg_archive_8cpp.html" title="TODO." alt="" coords="5,87,268,114"/>
+<area shape="rect" id="node3" href="$_dvd_archive_8hpp_source.html" title=" " alt="" coords="292,80,459,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,169,260,211"/>
+<area shape="rect" id="node5" href="$_multi_dvd_archive_8hpp_source.html" title=" " alt="" coords="284,169,467,211"/>
+<area shape="rect" id="node8" href="$_resource_manager_8hpp_source.html" title=" " alt="" coords="259,348,441,389"/>
+<area shape="rect" id="node6" href="$_localized_archive_8hpp_source.html" title=" " alt="" coords="83,259,273,300"/>
+<area shape="rect" id="node10" title=" " alt="" coords="349,259,532,300"/>
+<area shape="rect" id="node7" title=" " alt="" coords="44,348,235,389"/>
+<area shape="rect" id="node9" title=" " alt="" coords="259,437,441,479"/>
 </map>
