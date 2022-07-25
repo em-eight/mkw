@@ -20,8 +20,10 @@ digraph "EGG::Disposer"
   Node8 [label="EGG::Scene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_e_g_g_1_1_scene.html",tooltip=" "];
   Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
   Node9 [label="RKScene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_r_k_scene.html",tooltip=" "];
-  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
-  Node10 [label="System::BootStrapScene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_boot_strap_scene.html",tooltip=" "];
-  Node1 -> Node11 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="FreeMono"];
-  Node11 [label="System::CourseCache",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_course_cache.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
+  Node10 [label="System::InitScene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_init_scene.html",tooltip=" "];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
+  Node11 [label="System::BootStrapScene",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_boot_strap_scene.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="FreeMono"];
+  Node12 [label="System::CourseCache",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_course_cache.html",tooltip=" "];
 }

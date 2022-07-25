@@ -1,0 +1,6 @@
+<map id="System::RaceConfigScenario" name="System::RaceConfigScenario">
+<area shape="rect" id="node1" title=" " alt="" coords="204,5,435,32"/>
+<area shape="rect" id="node2" href="$class_system_1_1_awards_scenario.html" title=" " alt="" coords="5,80,204,107"/>
+<area shape="rect" id="node3" href="$class_system_1_1_menu_scenario.html" title=" " alt="" coords="228,80,411,107"/>
+<area shape="rect" id="node4" href="$class_system_1_1_race_scenario.html" title=" " alt="" coords="435,80,617,107"/>
+</map>

@@ -17,10 +17,12 @@ var searchData=
   ['memallocator_14',['MEMAllocator',['../class_m_e_m_allocator.html',1,'']]],
   ['memiuntheaphead_15',['MEMiUntHeapHead',['../class_m_e_mi_unt_heap_head.html',1,'']]],
   ['menucharactermanager_16',['MenuCharacterManager',['../class_system_1_1_menu_character_manager.html',1,'System']]],
-  ['messagegroup_17',['MessageGroup',['../class_u_i_1_1_message_group.html',1,'UI']]],
-  ['mii_18',['Mii',['../class_system_1_1_mii.html',1,'System']]],
-  ['mtx33_19',['MTX33',['../classnw4r_1_1math_1_1_m_t_x33.html',1,'nw4r::math']]],
-  ['mtx34_20',['MTX34',['../structnw4r_1_1math_1_1_m_t_x34.html',1,'nw4r::math']]],
-  ['mtx44_21',['MTX44',['../structnw4r_1_1math_1_1_m_t_x44.html',1,'nw4r::math']]],
-  ['multidvdarchive_22',['MultiDvdArchive',['../class_system_1_1_multi_dvd_archive.html',1,'System']]]
+  ['menuscenario_17',['MenuScenario',['../class_system_1_1_menu_scenario.html',1,'System']]],
+  ['messagegroup_18',['MessageGroup',['../class_u_i_1_1_message_group.html',1,'UI']]],
+  ['mii_19',['Mii',['../class_system_1_1_mii.html',1,'System']]],
+  ['miiid_20',['MiiId',['../struct_system_1_1_mii_id.html',1,'System']]],
+  ['mtx33_21',['MTX33',['../classnw4r_1_1math_1_1_m_t_x33.html',1,'nw4r::math']]],
+  ['mtx34_22',['MTX34',['../structnw4r_1_1math_1_1_m_t_x34.html',1,'nw4r::math']]],
+  ['mtx44_23',['MTX44',['../structnw4r_1_1math_1_1_m_t_x44.html',1,'nw4r::math']]],
+  ['multidvdarchive_24',['MultiDvdArchive',['../class_system_1_1_multi_dvd_archive.html',1,'System']]]
 ];

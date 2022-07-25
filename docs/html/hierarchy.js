@@ -85,6 +85,7 @@ var hierarchy =
     [ "EGG::HeapAllocArg", "struct_e_g_g_1_1_heap_alloc_arg.html", null ],
     [ "HeapCollection", "struct_heap_collection.html", null ],
     [ "EGG::HeapErrorArg", "struct_e_g_g_1_1_heap_error_arg.html", null ],
+    [ "InputManager", "class_input_manager.html", null ],
     [ "System::JobContext", "struct_system_1_1_job_context.html", null ],
     [ "Kart::KartComponent", "class_kart_1_1_kart_component.html", null ],
     [ "Field::MapdataStage::lensFlareOptions_t", "struct_field_1_1_mapdata_stage.html#struct_field_1_1_mapdata_stage_1_1lens_flare_options__t", null ],
@@ -111,6 +112,7 @@ var hierarchy =
     ] ],
     [ "UI::MessageGroup", "class_u_i_1_1_message_group.html", null ],
     [ "System::Mii", "class_system_1_1_mii.html", null ],
+    [ "System::MiiId", "struct_system_1_1_mii_id.html", null ],
     [ "System::MultiDvdArchive", "class_system_1_1_multi_dvd_archive.html", [
       [ "System::CourseDvdArchive", "class_system_1_1_course_dvd_archive.html", null ],
       [ "System::RaceSysDvdArchive", "class_system_1_1_race_sys_dvd_archive.html", null ],
@@ -126,7 +128,9 @@ var hierarchy =
           [ "EGG::UnitHeap", "class_e_g_g_1_1_unit_heap.html", null ]
         ] ],
         [ "EGG::Scene", "class_e_g_g_1_1_scene.html", [
-          [ "RKScene", "class_r_k_scene.html", null ],
+          [ "RKScene", "class_r_k_scene.html", [
+            [ "System::InitScene", "class_system_1_1_init_scene.html", null ]
+          ] ],
           [ "System::BootStrapScene", "class_system_1_1_boot_strap_scene.html", null ]
         ] ],
         [ "System::CourseCache", "class_system_1_1_course_cache.html", null ]
@@ -136,7 +140,9 @@ var hierarchy =
     [ "Field::ObjectParameter", "class_field_1_1_object_parameter.html", null ],
     [ "UI::Page", "class_u_i_1_1_page.html", null ],
     [ "Field::ObjectParameter::Parameter", "class_field_1_1_object_parameter.html#struct_field_1_1_object_parameter_1_1_parameter", null ],
-    [ "System::ParameterFile", "class_system_1_1_parameter_file.html", null ],
+    [ "System::ParameterFile", "class_system_1_1_parameter_file.html", [
+      [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
+    ] ],
     [ "nw4r::ut::Polymorphic", "structnw4r_1_1ut_1_1_polymorphic.html", [
       [ "nw4r::ut::IOStream", "structnw4r_1_1ut_1_1_i_o_stream.html", [
         [ "nw4r::ut::FileStream", "classnw4r_1_1ut_1_1_file_stream.html", [
@@ -150,11 +156,23 @@ var hierarchy =
     [ "nw4r::g3d::Camera::PostureInfo", "structnw4r_1_1g3d_1_1_camera.html#structnw4r_1_1g3d_1_1_camera_1_1_posture_info", null ],
     [ "ProcessInfo", "struct_process_info.html", null ],
     [ "EGG::Quatf", "class_e_g_g_1_1_quatf.html", null ],
-    [ "RaceConfig", "struct_race_config.html", null ],
-    [ "RaceConfigPlayer", "struct_race_config_player.html", null ],
-    [ "RaceConfigScenario", "struct_race_config_scenario.html", null ],
+    [ "System::RaceConfigEx", "class_system_1_1_race_config_ex.html", [
+      [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
+    ] ],
+    [ "System::RaceConfigEx2", "class_system_1_1_race_config_ex2.html", [
+      [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
+    ] ],
+    [ "System::RaceConfigPlayer", "class_system_1_1_race_config_player.html", null ],
+    [ "System::RaceConfigScenario", "class_system_1_1_race_config_scenario.html", [
+      [ "System::AwardsScenario", "class_system_1_1_awards_scenario.html", null ],
+      [ "System::MenuScenario", "class_system_1_1_menu_scenario.html", null ],
+      [ "System::RaceScenario", "class_system_1_1_race_scenario.html", null ]
+    ] ],
+    [ "System::RaceConfigSettings", "struct_system_1_1_race_config_settings.html", null ],
     [ "Util::Random", "class_util_1_1_random.html", null ],
+    [ "System::Rating", "class_system_1_1_rating.html", null ],
     [ "System::RawGhostFile", "struct_system_1_1_raw_ghost_file.html", null ],
+    [ "System::RawMii", "class_system_1_1_raw_mii.html", null ],
     [ "nw4r::g3d::ResCommon< T >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
     [ "nw4r::g3d::ResCommon< const nw4r::g3d::ResNameData >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
     [ "nw4r::g3d::ResCommon< nw4r::g3d::CameraData >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
@@ -201,6 +219,7 @@ var hierarchy =
     [ "EGG::TaskThread::TJob", "struct_e_g_g_1_1_task_thread_1_1_t_job.html", null ],
     [ "UI::TypeInfo", "struct_u_i_1_1_type_info.html", null ],
     [ "UI::UIControl", "class_u_i_1_1_u_i_control.html", null ],
+    [ "System::unkStruct", "struct_system_1_1unk_struct.html", null ],
     [ "UI::UnkStruct", "struct_u_i_1_1_unk_struct.html", null ],
     [ "EGG::Vector2f", "struct_e_g_g_1_1_vector2f.html", null ],
     [ "EGG::Vector3f", "struct_e_g_g_1_1_vector3f.html", null ],
