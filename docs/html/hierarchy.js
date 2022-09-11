@@ -177,6 +177,7 @@ var hierarchy =
     [ "nw4r::g3d::ResCommon< const nw4r::g3d::ResNameData >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
     [ "nw4r::g3d::ResCommon< nw4r::g3d::CameraData >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
     [ "nw4r::g3d::ResCommon< nw4r::g3d::FogData >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
+    [ "System::ResourceManager::ResMgrInstance", "class_system_1_1_resource_manager.html#union_system_1_1_resource_manager_1_1_res_mgr_instance", null ],
     [ "nw4r::g3d::ResName", "structnw4r_1_1g3d_1_1_res_name.html", null ],
     [ "nw4r::g3d::ResNameData", "structnw4r_1_1g3d_1_1_res_name_data.html", null ],
     [ "System::ResourceManager", "class_system_1_1_resource_manager.html", null ],

@@ -158,7 +158,7 @@ var annotated_dup =
       [ "Rating", "class_system_1_1_rating.html", null ],
       [ "RawGhostFile", "struct_system_1_1_raw_ghost_file.html", null ],
       [ "RawMii", "class_system_1_1_raw_mii.html", null ],
-      [ "ResourceManager", "class_system_1_1_resource_manager.html", null ],
+      [ "ResourceManager", "class_system_1_1_resource_manager.html", "class_system_1_1_resource_manager" ],
       [ "S", "struct_system_1_1_s.html", null ],
       [ "SceneCreatorStatic", "class_system_1_1_scene_creator_static.html", "class_system_1_1_scene_creator_static" ],
       [ "SystemManager", "class_system_1_1_system_manager.html", "class_system_1_1_system_manager" ],

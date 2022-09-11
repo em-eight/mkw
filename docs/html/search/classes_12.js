@@ -19,11 +19,12 @@ var searchData=
   ['rescommon_3c_20nw4r_3a_3ag3d_3a_3afogdata_20_3e_16',['ResCommon&lt; nw4r::g3d::FogData &gt;',['../classnw4r_1_1g3d_1_1_res_common.html',1,'nw4r::g3d']]],
   ['resfont_17',['ResFont',['../structnw4r_1_1ut_1_1_res_font.html',1,'nw4r::ut']]],
   ['resfontbase_18',['ResFontBase',['../structnw4r_1_1ut_1_1detail_1_1_res_font_base.html',1,'nw4r::ut::detail']]],
-  ['resname_19',['ResName',['../structnw4r_1_1g3d_1_1_res_name.html',1,'nw4r::g3d']]],
-  ['resnamedata_20',['ResNameData',['../structnw4r_1_1g3d_1_1_res_name_data.html',1,'nw4r::g3d']]],
-  ['resourcemanager_21',['ResourceManager',['../class_system_1_1_resource_manager.html',1,'System']]],
-  ['rkscene_22',['RKScene',['../class_r_k_scene.html',1,'']]],
-  ['romfont_23',['RomFont',['../structnw4r_1_1ut_1_1_rom_font.html',1,'nw4r::ut']]],
-  ['runtimetypeinfo_24',['RuntimeTypeInfo',['../structnw4r_1_1ut_1_1detail_1_1_runtime_type_info.html',1,'nw4r::ut::detail']]],
-  ['rvlarchive_25',['rvlArchive',['../classrvl_archive.html',1,'']]]
+  ['resmgrinstance_19',['ResMgrInstance',['../class_system_1_1_resource_manager.html#union_system_1_1_resource_manager_1_1_res_mgr_instance',1,'System::ResourceManager']]],
+  ['resname_20',['ResName',['../structnw4r_1_1g3d_1_1_res_name.html',1,'nw4r::g3d']]],
+  ['resnamedata_21',['ResNameData',['../structnw4r_1_1g3d_1_1_res_name_data.html',1,'nw4r::g3d']]],
+  ['resourcemanager_22',['ResourceManager',['../class_system_1_1_resource_manager.html',1,'System']]],
+  ['rkscene_23',['RKScene',['../class_r_k_scene.html',1,'']]],
+  ['romfont_24',['RomFont',['../structnw4r_1_1ut_1_1_rom_font.html',1,'nw4r::ut']]],
+  ['runtimetypeinfo_25',['RuntimeTypeInfo',['../structnw4r_1_1ut_1_1detail_1_1_runtime_type_info.html',1,'nw4r::ut::detail']]],
+  ['rvlarchive_26',['rvlArchive',['../classrvl_archive.html',1,'']]]
 ];
