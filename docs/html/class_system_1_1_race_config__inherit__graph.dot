@@ -5,9 +5,7 @@ digraph "System::RaceConfig"
   node [fontname="FreeMono",fontsize="10",shape=record];
   Node1 [label="System::RaceConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
-  Node2 [label="System::RaceConfigEx2",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_race_config_ex2.html",tooltip=" "];
+  Node2 [label="System::RaceConfigEx",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_race_config_ex.html",tooltip=" "];
   Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeMono"];
   Node3 [label="System::ParameterFile",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_parameter_file.html",tooltip=" "];
-  Node4 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="FreeMono"];
-  Node4 [label="System::RaceConfigEx",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_system_1_1_race_config_ex.html",tooltip=" "];
 }

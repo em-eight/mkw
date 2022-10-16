@@ -33,10 +33,13 @@ var hierarchy =
     [ "BoxColUnit", "struct_box_col_unit.html", null ],
     [ "nw4r::g3d::Camera", "structnw4r_1_1g3d_1_1_camera.html", null ],
     [ "nw4r::g3d::CameraData", "structnw4r_1_1g3d_1_1_camera_data.html", null ],
+    [ "System::CharacterVehicleChoice", "struct_system_1_1_character_vehicle_choice.html", null ],
     [ "nw4r::ut::CharStrmReader", "structnw4r_1_1ut_1_1_char_strm_reader.html", null ],
     [ "nw4r::ut::CharWidths", "structnw4r_1_1ut_1_1_char_widths.html", null ],
     [ "nw4r::ut::CharWriter", "classnw4r_1_1ut_1_1_char_writer.html", null ],
     [ "nw4r::ut::Color", "structnw4r_1_1ut_1_1_color.html", null ],
+    [ "System::CompetitionSettings", "struct_system_1_1_competition_settings.html", null ],
+    [ "System::CompetitionWrapper", "struct_system_1_1_competition_wrapper.html", null ],
     [ "UI::ControlGroup", "class_u_i_1_1_control_group.html", null ],
     [ "Field::CourseMap", "class_field_1_1_course_map.html", null ],
     [ "Field::ObjectParameter::Parameter::Data", "class_field_1_1_object_parameter.html#struct_field_1_1_object_parameter_1_1_parameter_1_1_data", null ],
@@ -143,6 +146,7 @@ var hierarchy =
     [ "System::ParameterFile", "class_system_1_1_parameter_file.html", [
       [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
     ] ],
+    [ "System::RaceConfig::Player", "class_system_1_1_race_config_1_1_player.html", null ],
     [ "nw4r::ut::Polymorphic", "structnw4r_1_1ut_1_1_polymorphic.html", [
       [ "nw4r::ut::IOStream", "structnw4r_1_1ut_1_1_i_o_stream.html", [
         [ "nw4r::ut::FileStream", "classnw4r_1_1ut_1_1_file_stream.html", [
@@ -159,18 +163,9 @@ var hierarchy =
     [ "System::RaceConfigEx", "class_system_1_1_race_config_ex.html", [
       [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
     ] ],
-    [ "System::RaceConfigEx2", "class_system_1_1_race_config_ex2.html", [
-      [ "System::RaceConfig", "class_system_1_1_race_config.html", null ]
-    ] ],
-    [ "System::RaceConfigPlayer", "class_system_1_1_race_config_player.html", null ],
-    [ "System::RaceConfigScenario", "class_system_1_1_race_config_scenario.html", [
-      [ "System::AwardsScenario", "class_system_1_1_awards_scenario.html", null ],
-      [ "System::MenuScenario", "class_system_1_1_menu_scenario.html", null ],
-      [ "System::RaceScenario", "class_system_1_1_race_scenario.html", null ]
-    ] ],
-    [ "System::RaceConfigSettings", "struct_system_1_1_race_config_settings.html", null ],
     [ "Util::Random", "class_util_1_1_random.html", null ],
     [ "System::Rating", "class_system_1_1_rating.html", null ],
+    [ "System::RawCompetitionFile", "struct_system_1_1_raw_competition_file.html", null ],
     [ "System::RawGhostFile", "struct_system_1_1_raw_ghost_file.html", null ],
     [ "System::RawMii", "class_system_1_1_raw_mii.html", null ],
     [ "nw4r::g3d::ResCommon< T >", "classnw4r_1_1g3d_1_1_res_common.html", null ],
@@ -188,10 +183,12 @@ var hierarchy =
     [ "System::S", "struct_system_1_1_s.html", [
       [ "System::MenuCharacterManager", "class_system_1_1_menu_character_manager.html", null ]
     ] ],
+    [ "System::RaceConfig::Scenario", "class_system_1_1_race_config_1_1_scenario.html", null ],
     [ "EGG::SceneCreator", "class_e_g_g_1_1_scene_creator.html", [
       [ "System::SceneCreatorStatic", "class_system_1_1_scene_creator_static.html", null ]
     ] ],
     [ "EGG::SceneManager", "class_e_g_g_1_1_scene_manager.html", null ],
+    [ "System::RaceConfig::Settings", "struct_system_1_1_race_config_1_1_settings.html", null ],
     [ "nw4r::math::detail::SinCosSample", "structnw4r_1_1math_1_1detail_1_1_sin_cos_sample.html", null ],
     [ "nw4r::snd::SoundArchive", "classnw4r_1_1snd_1_1_sound_archive.html", [
       [ "nw4r::snd::DvdSoundArchive", "classnw4r_1_1snd_1_1_dvd_sound_archive.html", null ]
