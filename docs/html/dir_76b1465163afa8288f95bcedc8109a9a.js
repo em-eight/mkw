@@ -8,6 +8,7 @@ var dir_76b1465163afa8288f95bcedc8109a9a =
     [ "LocalizedArchive.hpp", "_localized_archive_8hpp_source.html", null ],
     [ "Mii.hpp", "_mii_8hpp_source.html", null ],
     [ "MultiDvdArchive.hpp", "_multi_dvd_archive_8hpp_source.html", null ],
+    [ "NandUtil.hpp", "_nand_util_8hpp_source.html", null ],
     [ "RaceConfig.hpp", "_race_config_8hpp_source.html", null ],
     [ "ResourceManager.hpp", "_resource_manager_8hpp_source.html", null ],
     [ "SaveManager.hpp", "_save_manager_8hpp_source.html", null ]
