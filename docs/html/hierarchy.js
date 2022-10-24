@@ -42,7 +42,7 @@ var hierarchy =
     [ "System::CompetitionWrapper", "struct_system_1_1_competition_wrapper.html", null ],
     [ "UI::ControlGroup", "class_u_i_1_1_control_group.html", null ],
     [ "System::Controller", "class_system_1_1_controller.html", null ],
-    [ "Field::CourseMap", "class_field_1_1_course_map.html", null ],
+    [ "System::CourseMap", "class_system_1_1_course_map.html", null ],
     [ "Field::ObjectParameter::Parameter::Data", "class_field_1_1_object_parameter.html#struct_field_1_1_object_parameter_1_1_parameter_1_1_data", null ],
     [ "System::Date", "class_system_1_1_date.html", null ],
     [ "UI::Deferred< T >", "struct_u_i_1_1_deferred.html", null ],

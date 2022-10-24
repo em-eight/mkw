@@ -38,7 +38,6 @@ var annotated_dup =
     ] ],
     [ "Field", null, [
       [ "BaseGeoHitTableManager", "class_field_1_1_base_geo_hit_table_manager.html", null ],
-      [ "CourseMap", "class_field_1_1_course_map.html", null ],
       [ "GeoHitTableItemManager", "class_field_1_1_geo_hit_table_item_manager.html", null ],
       [ "GeoHitTableItemObjManager", "class_field_1_1_geo_hit_table_item_obj_manager.html", null ],
       [ "MapdataArea", "class_field_1_1_mapdata_area.html", "class_field_1_1_mapdata_area" ],
@@ -138,6 +137,7 @@ var annotated_dup =
       [ "Controller", "class_system_1_1_controller.html", null ],
       [ "CourseCache", "class_system_1_1_course_cache.html", null ],
       [ "CourseDvdArchive", "class_system_1_1_course_dvd_archive.html", null ],
+      [ "CourseMap", "class_system_1_1_course_map.html", null ],
       [ "Date", "class_system_1_1_date.html", null ],
       [ "DvdArchive", "class_system_1_1_dvd_archive.html", null ],
       [ "GhostFile", "class_system_1_1_ghost_file.html", null ],
