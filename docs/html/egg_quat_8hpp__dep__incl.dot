@@ -7,4 +7,8 @@ digraph "source/egg/math/eggQuat.hpp"
   Node1 [label="source/egg/math/eggQuat.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="TODO."];
   Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
   Node2 [label="source/egg/math/eggQuat.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$egg_quat_8cpp.html",tooltip="TODO."];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="source/game/system\l/CourseMap.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_course_map_8hpp_source.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="source/game/system\l/CourseMap.cpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

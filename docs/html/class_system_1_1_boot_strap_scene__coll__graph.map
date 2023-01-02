@@ -1,6 +1,6 @@
 <map id="System::BootStrapScene" name="System::BootStrapScene">
-<area shape="rect" id="node1" title=" " coords="5,225,204,251"/>
-<area shape="rect" id="node2" href="$class_e_g_g_1_1_scene.html" title=" " coords="53,152,156,177"/>
-<area shape="rect" id="node3" href="$class_e_g_g_1_1_disposer.html" title="Base class for garbage&#45;collected objects." coords="41,79,168,104"/>
-<area shape="rect" id="node4" href="$class_non_copyable.html" title=" " coords="49,5,160,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,225,204,251"/>
+<area shape="rect" id="node2" href="$class_e_g_g_1_1_scene.html" title=" " alt="" coords="53,152,156,177"/>
+<area shape="rect" id="node3" href="$class_e_g_g_1_1_disposer.html" title="Base class for garbage&#45;collected objects." alt="" coords="41,79,168,104"/>
+<area shape="rect" id="node4" href="$class_non_copyable.html" title=" " alt="" coords="49,5,160,31"/>
 </map>
