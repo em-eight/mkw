@@ -17,7 +17,53 @@ from mkwutil.project import *
 from mkwutil.sections import REL_SECTIONS, REL_SECTION_IDX, Section
 from mkwutil.lib.symbols import SymbolsList, Symbol
 
-from ppcdis import diff_relocs, load_binary_yml
+from ppcdis import load_binary_yml, RelReader
+
+def print_diff(name: str, a: int, b: int):
+    """Prints the diff of two integer values"""
+
+    if a == b:
+        clr = ""
+    elif b > a:
+        clr = Fore.LIGHTBLUE_EX
+    else:
+        clr = Fore.RED
+
+    print(f"\t{name:10}:  {a:#10x}  {clr}{b:#10x}{Style.RESET_ALL}")
+
+def diff_reloc(good, test, dataflow_funcs, r1, r2):
+    if r1.write_addr is not None and r2.write_addr is not None:
+        for addr, size, name in dataflow_funcs:
+            if addr <= r1.write_addr and r1.write_addr < addr+size:
+                return False # Skip checking relocs in flow checked regions, since ppc2cpp does that
+        return not (r1.write_addr == r2.write_addr and good.get_reloc_target(r1) == test.get_reloc_target(r2))
+    else:
+        return r1 != r2
+
+def diff_relocs(good: RelReader, test: RelReader, dataflow_funcs, max_diffs=-1):
+    """Prints the diff of the relocations in two rels"""
+
+    n = 0
+    any_diff = False
+    for i, (r1, r2) in enumerate(zip(good.ordered_relocs, test.ordered_relocs)):
+        if diff_reloc(good, test, dataflow_funcs, r1, r2):
+            any_diff = True
+            print(f"Reloc {i}")
+
+            print_diff("Module", r1.target_module, r2.target_module)
+            print_diff("Offset", r1.offset, r2.offset)
+            print_diff("Type", r1.t, r2.t)
+            print_diff("Section", r1.section, r2.section)
+            print_diff("Addend", r1.addend, r2.addend)
+            if r1.write_addr is not None and r2.write_addr is not None:
+                print_diff("Target", good.get_reloc_target(r1), test.get_reloc_target(r2))
+                print_diff("Write Addr", r1.write_addr, r2.write_addr)
+            n += 1
+            if n == max_diffs:
+                print("Reached max diff count, stopping")
+                break
+
+    return any_diff
 
 # https://stackoverflow.com/questions/312443/how-do-you-split-a-list-into-evenly-sized-chunks
 def chunks(lst, n):
@@ -170,7 +216,7 @@ def verify_rel(reference: Path, target: Path):
         orig_yaml = str(Path("mkwutil/ppcdis_adapter/rel.yaml"))
         good = load_binary_yml(orig_yaml)
         test = good.load_other(target)
-        reloc_match = not diff_relocs(good, test, max_diffs=20)
+        reloc_match = not diff_relocs(good, test, dataflow_funcs, max_diffs=20)
 
         if reloc_match:
             binary_diff_exitcode = check_dataflow_funcs(dataflow_funcs)

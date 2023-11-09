@@ -162,16 +162,6 @@ extern "C" u32 lbl_808b6528[];
 
 // .bss
 
-#ifndef EQUIVALENT
-// https://decomp.me/scratch/BMILo - Equivalent
-// Symbol: __ct__Q24Kart9KartStateFPQ24Kart12KartSettings
-// PAL: 0x805943b4..0x8059455c
-MARK_BINARY_BLOB(__ct__Q24Kart9KartStateFPQ24Kart12KartSettings, 0x805943b4,
-                 0x8059455c);
-asm UNKNOWN_FUNCTION(__ct__Q24Kart9KartStateFPQ24Kart12KartSettings) {
-#include "asm/805943b4.s"
-}
-#else
 namespace Kart {
 
 MARK_FLOW_CHECK(0x805943b4);
@@ -225,7 +215,6 @@ KartState::KartState(KartSettings* settings) {
 }
 
 } // namespace Kart
-#endif
 
 namespace Kart {
 
